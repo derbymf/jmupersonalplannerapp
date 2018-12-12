@@ -1,3 +1,4 @@
+
 <template>
   <v-app>
     <v-toolbar app>
@@ -15,11 +16,30 @@
       </v-btn>
     </v-toolbar>
 
+    <template>
+  <v-data-table
+    :headers="headers"
+    :items="Classes"
+    class="elevation-1"
+  >
+    <template slot="items" slot-scope="props">
+      <td>{{ props.item.name }}</td>
+      <td class="text-xs-right">{{ props.item.calories }}</td>
+      <td class="text-xs-right">{{ props.item.fat }}</td>
+      <td class="text-xs-right">{{ props.item.carbs }}</td>
+      <td class="text-xs-right">{{ props.item.protein }}</td>
+      <td class="text-xs-right">{{ props.item.iron }}</td>
+    </template>
+  </v-data-table>
+</template>
+
     <v-content>
       <HelloWorld/>
     </v-content>
   </v-app>
 </template>
+
+
 
 <script>
 import HelloWorld from './components/HelloWorld'
@@ -35,4 +55,6 @@ export default {
     }
   }
 }
+
+
 </script>
