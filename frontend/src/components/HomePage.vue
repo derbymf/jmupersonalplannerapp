@@ -44,7 +44,7 @@
     <v-layout row wrap>
     </v-layout>
 
-    <v-date-picker v-model="picker" :landscape="landscape" :reactive="reactive"></v-date-picker>
+   <v-date-picker color="primary" v-model="picker" @change="goToPlanner"></v-date-picker>
   </div>
 </template>
   </v-container>
@@ -64,3 +64,21 @@
 <style>
 
 </style>
+
+<script>
+
+    export default {
+    data () {
+      return {
+        picker: new Date().toISOString().substr(0, 10),
+        landscape: false,
+        reactive: false
+      }
+    },
+    methods: {
+      goToPlanner() {
+        this.$router.push({name: "planner", params: {date: this.picker}});
+      }
+    }
+  }
+</script>

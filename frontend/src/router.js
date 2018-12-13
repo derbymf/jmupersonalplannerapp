@@ -2,6 +2,7 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import HomePage from './components/HomePage.vue';
+import Planner from './views/Planner.vue';
 
 Vue.use(Router);
 
@@ -19,7 +20,13 @@ export default new Router({
       path: "/dashboard",
       name: "homepage",
       component: HomePage
-    }
+    },
+    {
+      path: "/planner",
+      name: "planner",
+      component: Planner
+    },
+
     // {
     //   path: "/about",
     //   name: "about",

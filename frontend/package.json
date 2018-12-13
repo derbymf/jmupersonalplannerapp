@@ -10,6 +10,7 @@
   "dependencies": {
     "@feathersjs/client": "^3.7.5",
     "axios": "^0.18.0",
+    "date-fns": "^1.30.1",
     "register-service-worker": "^1.5.2",
     "vee-validate": "^2.1.4",
     "vue": "^2.5.17",
